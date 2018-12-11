@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <string.h>
+#include <cstring>
 #include "Data.h"
 #include "Node.h"
 #ifndef TREE_H
@@ -14,6 +17,14 @@
 		bool isRoot(struct Node * node);
 		struct Data getValue(struct Node * node);
 		void prune(struct Node * index);
+		struct Node * search(int value);
+		struct Node * search(float value);
+		struct Node * search(char value);
+		struct Node * search(std::string value);
+		struct Node * search(int value, struct Node * node);
+		struct Node * search(float value, struct Node * node);
+		struct Node * search(char value, struct Node * node);
+		struct Node * search(std::string value, struct Node * node);
 		~Tree();
 		struct Node * Root;
 	private:

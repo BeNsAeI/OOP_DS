@@ -1,6 +1,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
+#include <string.h>
+#include <cstring>
 #include "color.h"
 #include "Data.h"
 #include "Node.h"
@@ -59,6 +62,118 @@ void Tree::prune(struct Node * index){
 		}
 		delete(index);
 	}
+}
+struct Node * Tree::search(int value){
+	if (this->Root->data.INT == value)
+		return (this->Root);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(this->Root->left != NULL)
+		left = this->search(value, this->Root->left);
+	if(this->Root->right != NULL)
+		right = this->search(value, this->Root->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(float value){
+	if (this->Root->data.FLOAT == value)
+		return (this->Root);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(this->Root->left != NULL)
+		left = this->search(value, this->Root->left);
+	if(this->Root->right != NULL)
+		right = this->search(value, this->Root->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(char value){
+	if (this->Root->data.CHAR == value)
+		return (this->Root);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(this->Root->left != NULL)
+		left = this->search(value, this->Root->left);
+	if(this->Root->right != NULL)
+		right = this->search(value, this->Root->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(std::string value){
+	if (this->Root->data.STRING == value)
+		return (this->Root);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(this->Root->left != NULL)
+		left = this->search(value, this->Root->left);
+	if(this->Root->right != NULL)
+		right = this->search(value, this->Root->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(int value, struct Node * node){
+	if (node->data.INT == value)
+		return (node);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(node->left != NULL)
+		left = this->search(value, node->left);
+	if(node->right != NULL)
+		right = this->search(value, node->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(float value, struct Node * node){
+	if (node->data.FLOAT == value)
+		return (node);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(node->left != NULL)
+		left = this->search(value, node->left);
+	if(node->right != NULL)
+		right = this->search(value, node->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(char value, struct Node * node){
+	if (node->data.CHAR == value)
+		return (node);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(node->left != NULL)
+		left = this->search(value, node->left);
+	if(node->right != NULL)
+		right = this->search(value, node->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
+}
+struct Node * Tree::search(std::string value, struct Node * node){
+	if (node->data.STRING == value)
+		return (node);
+	struct Node * left = NULL;
+	struct Node * right = NULL;
+	if(node->left != NULL)
+		left = this->search(value, node->left);
+	if(node->right != NULL)
+		right = this->search(value, node->right);
+	if (left != NULL)
+		return (left);
+	else
+		return (right);
 }
 Tree::~Tree(){
 	delete(Root);
