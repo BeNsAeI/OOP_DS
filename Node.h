@@ -12,4 +12,8 @@
 		struct Node * right;
 		struct Node * parent;
 	};
+	struct Sentinal{
+		struct Node * next;
+		struct Node * previous;
+	};
 #endif

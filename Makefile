@@ -1,4 +1,4 @@
-src = main.cpp tree.cpp
+src = main.cpp tree.cpp linkedList.cpp
 test = test.cpp tree.cpp
 obj = $(src:.c=.o)
 compiler = g++

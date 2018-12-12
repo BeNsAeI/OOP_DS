@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "color.h"
 #include "tree.h"
+#include "linkedList.h"
 int main( int argc, char** argv)
 {
 	printf(ANSI_COLOR_BLUE "initiating tests...\n" ANSI_COLOR_RESET);
