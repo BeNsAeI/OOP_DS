@@ -176,5 +176,9 @@ struct Node * Tree::search(std::string value, struct Node * node){
 		return (right);
 }
 Tree::~Tree(){
+	if(Root->left != NULL)
+		this->prune(Root->left);
+	if(Root->right != NULL)
+		this->prune(Root->right);
 	delete(Root);
 }

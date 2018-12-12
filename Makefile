@@ -1,5 +1,5 @@
 src = main.cpp tree.cpp linkedList.cpp
-test = test.cpp tree.cpp
+test = test.cpp tree.cpp linkedList.cpp
 obj = $(src:.c=.o)
 compiler = g++
 LDFLAGS = -Wall

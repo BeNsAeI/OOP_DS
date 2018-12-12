@@ -8,20 +8,21 @@
 	class LinkedList{
 	public:
 		LinkedList();
-		void pushQueue(struct Node * node);
-		void popQueue(struct Node * node);
-		void pushStack(struct Node * node);
-		void popStack(struct Node * node);
+		void push(struct Node * node);
+		void popQueue();
+		void popStack();
 		void addAfter(struct Node * current, struct Node * newNode);
 		void addBefore(struct Node * current, struct Node * newNode);
 		void remove(struct Node * node);
+		struct Node * Top();
+		struct Node * Tail();
 		struct Node * search(int value);
 		struct Node * search(float value);
 		struct Node * search(char value);
 		struct Node * search(std::string value);
 		~LinkedList();
-		struct Node * frontSentinal;
-		struct Node * backSentinal;
+		struct Sentinal * frontSentinal;
+		struct Sentinal * backSentinal;
 	private:
 	protected:
 	};

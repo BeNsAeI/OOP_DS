@@ -1,7 +1,6 @@
 #include "Data.h"
 #ifndef NODE_H
 #define NODE_H
-
 	struct Node{
 		struct Data data;
 		int index;
@@ -12,8 +11,5 @@
 		struct Node * right;
 		struct Node * parent;
 	};
-	struct Sentinal{
-		struct Node * next;
-		struct Node * previous;
-	};
+	#define Sentinal Node
 #endif
